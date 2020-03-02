@@ -26,9 +26,16 @@ $(document).ready(function() {
             pallinoAttivo.removeClass('active');
             prossimaPallino.addClass('active');
         }
-    } setInterval(nextSlide,2000);
+    }
 
 
-
-
+var clock = setInterval(nextSlide,1000);
+    $('.images').mouseenter(function() {
+        clearInterval(clock);
+    });
+    $('.images').mouseleave(function() {
+        setTimeout(function() {
+            clock = setInterval(nextSlide,1000)
+            ;}, 1000);
+    });
 });
