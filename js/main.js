@@ -26,7 +26,7 @@ $(document).ready(function() {
             pallinoAttivo.removeClass('active');
             prossimaPallino.addClass('active');
         }
-    }
+    } setInterval(nextSlide,2000);
 
 
 
